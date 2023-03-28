@@ -66,6 +66,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>
                 </div>
+                
+                <!-- <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                </div> -->
 
                 {% endfor %}
             </div>
@@ -92,6 +98,9 @@
             let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
             alert.close();
+            let success = document.getElementById("success");
+            let alerts = new bootstrap.Alert(success);
+            alerts.close();
         }, 3000);
     </script>
 </body>
